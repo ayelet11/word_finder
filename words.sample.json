@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1",
+    "word": "synagogue",
+    "description": "the place we go Saturday morning",
+    "category": "places",
+    "notes": "near the old pharmacy on Herzl Street",
+    "tags": ["religion", "routine", "weekly"]
+  },
+  {
+    "id": "2",
+    "word": "physiotherapist",
+    "description": "the person who helps me move my arm",
+    "category": "people",
+    "notes": "appointment every Tuesday at 10",
+    "tags": ["medical", "routine"]
+  },
+  {
+    "id": "3",
+    "word": "remote control",
+    "description": "the thing for the television",
+    "category": "objects",
+    "notes": "usually on the small table next to the sofa",
+    "tags": ["home", "tv"]
+  },
+  {
+    "id": "4",
+    "word": "Miri",
+    "description": "my daughter, the one who lives in Haifa",
+    "category": "family",
+    "notes": "calls on Friday evenings",
+    "tags": ["family", "daughter"]
+  },
+  {
+    "id": "5",
+    "word": "blood pressure pills",
+    "description": "the small white pill I take in the morning",
+    "category": "medication",
+    "notes": "in the blue box in the kitchen cabinet",
+    "tags": ["medical", "daily", "morning"]
+  },
+  {
+    "id": "6",
+    "word": "supermarket",
+    "description": "where we buy food",
+    "category": "places",
+    "notes": "the big one on the main road, not the small kiosk",
+    "tags": ["shopping", "routine"]
+  },
+  {
+    "id": "7",
+    "word": "walker",
+    "description": "the metal frame that helps me walk",
+    "category": "objects",
+    "notes": "kept next to the bed",
+    "tags": ["mobility", "medical"]
+  },
+  {
+    "id": "8",
+    "word": "cardiologist",
+    "description": "the heart doctor at the hospital",
+    "category": "people",
+    "notes": "Dr. Cohen, next appointment in March",
+    "tags": ["medical", "specialist"]
+  }
+]
