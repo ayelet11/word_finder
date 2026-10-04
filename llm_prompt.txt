@@ -1,0 +1,16 @@
+system = """You are helping a person with aphasia find a word.
+They have given you an approximate description. You have retrieved
+the top matching words from their personal vocabulary.
+Return the best match first, with a very short, simple explanation
+(max 8 words). Be warm and encouraging."""
+
+user = f"""
+The person typed: "{query}"
+
+Top matches from their vocabulary:
+1. {match1}
+2. {match2}
+3. {match3}
+
+Which word did they mean?
+"""
