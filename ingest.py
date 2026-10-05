@@ -5,9 +5,7 @@ drops and rebuilds the ChromaDB collection cleanly, and prints a confirmation.
 
 Set env key for OPEN AI: Missing credentials. Please pass an `api_key`, `workload_identity`, `admin_api_key`, or set the `OPENAI_API_KEY` or `OPENAI_ADMIN_KEY` environment variable.
 '''
-import truststore
 
-truststore.inject_into_ssl()
 import json
 import uuid
 from pathlib import Path
@@ -90,37 +88,3 @@ def ingest_words(words_path: str = WORDS_PATH, db_path: str = DB_PATH) -> int:
 if __name__ == "__main__":
     count = ingest_words()
     print(f"✓ Ingested {count} words into ChromaDB at '{DB_PATH}'.")
-r'''
-
-from openai import OpenAI
-
-client = OpenAI()
-
-raceback (most recent call last):
-  File "C:\Program Files\JetBrains\PyCharm 2025.3.3\plugins\python-ce\helpers\pydev\pydevconsole.py", line 364, in runcode
-    coro = func()
-           ^^^^^^
-  File "<input>", line 1, in <module>
-  File "C:\Program Files\JetBrains\PyCharm 2025.3.3\plugins\python-ce\helpers\pydev\_pydev_bundle\pydev_umd.py", line 197, in runfile
-    pydev_imports.execfile(filename, global_vars, local_vars)  # execute the script
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\JetBrains\PyCharm 2025.3.3\plugins\python-ce\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
-    exec(compile(contents+"\n", file, 'exec'), glob, loc)
-  File "C:\Users\User\Documents\Ayelet\LLM Projects\WordFinder\ingest.py", line 87, in <module>
-    count = ingest_words()
-            ^^^^^^^^^^^^^^
-  File "C:\Users\User\Documents\Ayelet\LLM Projects\WordFinder\ingest.py", line 66, in ingest_words
-    embeddings = OpenAIEmbeddings(model=EMBEDDING_MODEL)
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\User\Documents\Ayelet\LLM Projects\WordFinder\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
-    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\User\Documents\Ayelet\LLM Projects\WordFinder\.venv\Lib\site-packages\langchain_openai\embeddings\base.py", line 454, in validate_environment
-    self.async_client = openai.AsyncOpenAI(
-                        ^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\User\Documents\Ayelet\LLM Projects\WordFinder\.venv\Lib\site-packages\openai\_client.py", line 1019, in __init__
-    raise OpenAIError(
-openai.OpenAIError: Missing credentials. Please pass an `api_key`, `workload_identity`, `admin_api_key`, or set the `OPENAI_API_KEY` or `OPENAI_ADMIN_KEY` environment variable.
-
-
-'''
