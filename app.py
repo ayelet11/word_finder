@@ -18,7 +18,7 @@ from ingest import ingest_words
 
 DB_PATH = "db"
 if not Path(DB_PATH).exists() or not any(Path(DB_PATH).iterdir()):
-    ingest_words()  # builds from data/words.sample.json automatically
+    ingest_words(words_path ='words.sample.json')  # builds from data/words.sample.json automatically
 from llm import find_word
 
 # ── Page config ────────────────────────────────────────────────────────────────
