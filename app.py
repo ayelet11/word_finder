@@ -11,6 +11,14 @@ from pathlib import Path
 import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).parent / "rag"))
+from pathlib import Path
+import sys
+
+from ingest import ingest_words
+
+DB_PATH = "db"
+if not Path(DB_PATH).exists() or not any(Path(DB_PATH).iterdir()):
+    ingest_words()  # builds from data/words.sample.json automatically
 from llm import find_word
 
 # ── Page config ────────────────────────────────────────────────────────────────
